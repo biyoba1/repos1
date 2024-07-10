@@ -1,0 +1,10 @@
+services:
+  database:
+    container_name: test_project_database
+    image: postgres:latest
+    environment:
+      - POSTGRES_PASSWORD=qwerty
+    ports:
+      - 5436:5432
+    volumes:
+      - ./.database/postgres/data:/var/lib/postgresql/data
