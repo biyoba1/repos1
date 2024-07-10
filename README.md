@@ -30,23 +30,19 @@ Create a new order.
   "Client": {
     "client_name": "John",
     "exchange_name": "Binance",
-    "label": {
-      "myLabel",
-      "pair": "BTCUSDT"
-    },
-    "Order": {
-      "side": "BUY",
-      "types": {
-        "LIMIT",
-        "base_qty": 0.01,
-        "price": 35000.0,
-        "algorithm_name_placed": "My Algorithm",
-        "lowest_sell_prc": 34900.0,
-        "highest_buy_prc": 35100.0,
-        "commission_quote_qty": 0.0001,
-        "time_placed": "2023-02-20T14:30:00Z"
-      }
-    }
+    "label": "My Label",
+    "pair": "BTCUSDT"
+  },
+  "Order": {
+    "side": "BUY",
+    "types": "LIMIT",
+    "base_qty": 0.01,
+    "price": 35000.0,
+    "algorithm_name_placed": "My Algorithm",
+    "lowest_sell_prc": 34900.0,
+    "highest_buy_prc": 35100.0,
+    "commission_quote_qty": 0.0001,
+    "time_placed": "2023-02-20T14:30:00Z"
   }
 }
 ```
