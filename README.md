@@ -1,16 +1,31 @@
-Order Book API
-This API provides four handles for managing orders and order books.
-Endpoints
-GET /orders/
+
+
+**Order Book API**
+================
+
+### Endpoints
+
+#### GET /orders/
+
 Retrieve a list of orders for a specific client.
-Query Parameters
-client_name: The name of the client to retrieve orders for.
-Example Request
+
+**Query Parameters**
+
+* `client_name`: The name of the client to retrieve orders for.
+
+**Example Request**
+
+```
 GET http://localhost:8000/orders/?client_name=John
-POST /orders/
+```
+
+#### POST /orders/
+
 Create a new order.
-Request Body
-json
+
+**Request Body**
+
+```json
 {
   "Client": {
     "client_name": "John",
@@ -34,18 +49,30 @@ json
     }
   }
 }
+```
 
-GET /orderBook/
+#### GET /orderBook/
+
 Retrieve the order book for a specific exchange and pair.
-Query Parameters
-exchangeName: The name of the exchange to retrieve the order book for.
-pair: The pair to retrieve the order book for.
-Example Request
+
+**Query Parameters**
+
+* `exchangeName`: The name of the exchange to retrieve the order book for.
+* `pair`: The pair to retrieve the order book for.
+
+**Example Request**
+
+```
 GET http://localhost:8000/orderBook/?exchangeName=BTC&pair=USDT
-POST /orderBook/
+```
+
+#### POST /orderBook/
+
 Create a new order book.
-Request Body
-json
+
+**Request Body**
+
+```json
 {
   "exchangeName": "BTC",
   "pair": "USDT",
@@ -64,8 +91,15 @@ json
     }
   ]
 }
+```
 
-Database Migrations
+### Database Migrations
+
 To bring up the database, run the following command:
+
+```
 make local-migration-up
+```
+
 This will apply the database migrations using Goose.
+
