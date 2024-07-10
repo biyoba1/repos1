@@ -12,8 +12,3 @@ type OrderBook struct {
 	Bids     []*DepthOrder
 }
 
-//
-//type OrderBook struct {
-//	Asks []*DepthOrder `json:"asks"`
-//	Bids []*DepthOrder `json:"bids"`
-//}
