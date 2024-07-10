@@ -63,7 +63,7 @@ Retrieve the order book for a specific exchange and pair.
 **Example Request**
 
 ```
-GET http://localhost:8000/orderBook/?exchangeName=BTC&pair=USDT
+GET http://localhost:8000/orderBook/?exchange=BTC&pair=USDT
 ```
 
 #### POST /orderBook/
